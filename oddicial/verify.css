@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration: aqua;
+}
+
+body {
+    min-height: 1vh;
+    height: 100%;
+    width: 100vw; 
+    /* background-image: linear-gradient(to bottom, rgb(231, 224, 224) 75%, rgb(168, 55, 157) 100%); */
+    background-image: linear-gradient(to bottom, rgb(237, 237, 242) 75%, rgb(65, 65, 141) 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    margin: 0px;   
+}
+
+nav
+{
+    position: fixed;
+    top: 0px;
+}

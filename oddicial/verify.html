@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="verify.css">
+    <title>Bootstrap Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"
+        integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com//ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="verify.js"></script>
+    <title>Document</title>
+</head>
+
+<body onload="connectMetamask();connectContract()">
+    <!-- <h1>hello iam a user</h1> -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.jpg" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+            </a>
+            <div class="d-flex justify-content-end">
+                <!-- <button class="btn btn-primary" onclick="support()">
+                    Support
+                </button> -->
+                <!-- <a class="navbar-brand" href="Register_patch.html">
+              Register Patch
+            </a> -->
+                <!-- <button class="btn btn-primary" onclick="openlogin()" style="background-color: brown;">
+                    logout
+                </button> -->
+                <button class="btn btn-primary" onclick="report()" style="background-color: rgb(42, 128, 165);">
+                    report a bug
+                </button>
+                <button class="btn btn-primary" onclick="Labeler()" style="background-color: rgb(147, 165, 42);">
+                    labeler
+                </button>
+                <button class="btn btn-primary" onclick="admin()" style="background-color: rgb(165, 104, 42);">
+                    admin
+                </button>
+                <button class="btn btn-primary" onclick="register()" style="background-color: rgb(42, 85, 165);">
+                    register patch
+                </button>
+                <button class="btn btn-primary" onclick="verify()" style="background-color: rgb(147, 42, 165);">
+                    verify
+                </button>
+                <button class="btn btn-primary" onclick="support()">
+                    Support
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+
+    <nav class="container navbar navbar-expand-sm bg-light navbar">
+        <div class="container">
+
+            <!-- <button class="btn btn-outline-primary" onclick="register()">
+                register Patch
+            </button> -->
+
+            <button class="btn btn-outline-secondary">
+                verify
+            </button>
+
+            <button class="btn btn-outline-success" onclick="deploy()">
+                deploy
+            </button>
+
+
+            <!-- <button class="btn btn-outline-danger">
+                Get Patch Details
+            </button>
+
+            <button class="btn btn-outline-info">
+                Get Download History
+            </button>
+
+            <button class="btn btn-outline-dark">
+                report on bugs
+            </button> -->
+        </div>
+
+    </nav>
+    <!-- <button onclick="connectMetamask()">CONNECT TO METAMASK</button> <br>
+	<p id="accountArea">Connection Status: NOT CONNECTED to Metamask </p>
+
+	<button onclick="connectContract()">CONNECT TO CONTRACT</button> <br>
+	<p id="contractArea">Connection Status: NOT CONNECTED to Smart Contract</p> -->
+
+
+    <!-- <button onclick="setpatchdetails()">enter patchname and patch id</button> <br>
+    <input type="text" id="inputArea">
+    <input type="text" id="inputArea2">
+    <input type="text" id="inputArea3">
+    <input type="text" id="inputArea4">
+    <input type="text" id="inputArea5">
+    <br> <br>
+    <p>patch id are:</p>
+    <p id="demo"></p>
+    <button onclick="getpatchdetails()">get patch details</button>
+    <br>
+    <input type="number" id="cid">
+    <p id="dataArea">Data Status: NO Data from Smart Contract </p>
+    <script src="we.js"></script> -->
+
+    <!-- <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">sno</th>
+                    <th scope="col">name</th>
+                    <th scope="col">version</th>
+                    <th scope="col">dis</th>
+                    <th scope="col">send to verify</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>chrome</td>
+                    <td>chr-1</td>
+                    <td>taking more ram</td>
+                    <td><button class="btn btn-primary">send</button></td>
+                </tr> -->
+    <!-- <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr> -->
+    </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    <div class="container">
+        <table id="table2" class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Patch Nmae</th>
+                    <th scope="col">Operation System</th>
+                    <th scope="col">Application</th>
+                    <th scope="col">Version</th>
+                    <th scope="col">Descripition</th>
+                    <th scope="col">file</th>
+                    <th scope="col">Verify/Reject</th>
+                    <th scope="col">download</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <!-- Table rows will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+
+</body>
+
+</html>
