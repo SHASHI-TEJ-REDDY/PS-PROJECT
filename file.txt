@@ -1,0 +1,36 @@
+*** <original file> <original timestamp>
+--- <new file> <new timestamp>
+<diffs>
+*** <original file> <original timestamp>
+--- <new file> <new timestamp>
+<diffs>
+*** <original file> <original timestamp>
+--- <new file> <new timestamp>
+<diffs>
+*** <original file> <original timestamp>
+--- <new file> <new timestamp>
+<diffs>
+*** <original file> <original timestamp>
+--- <new file> <new timestamp>
+<diffs>
+*** <original file> <original timestamp>
+--- <new file> <new timestamp>
+<diffs>
+*** <original file> <original timestamp>
+--- <new file> <new timestamp>
+<diffs>
+*** <original file> <original timestamp>
+--- <new file> <new timestamp>
+<diffs>*** <original file> <original timestamp>
+--- <new file> <new timestamp>
+<diffs>*** <original file> <original timestamp>
+--- <new file> <new timestamp>
+<diffs>*** <original file> <original timestamp>
+--- <new file> <new timestamp>
+<diffs>*** <original file> <original timestamp>
+--- <new file> <new timestamp>
+<diffs>*** <original file> <original timestamp>
+--- <new file> <new timestamp>
+<diffs>*** <original file> <original timestamp>
+--- <new file> <new timestamp>
+<diffs>
